@@ -1,0 +1,52 @@
+{
+  "name": "Team",
+  "type": "object",
+  "properties": {
+    "team_number": {
+      "type": "string",
+      "description": "Unique team identifier"
+    },
+    "team_name": {
+      "type": "string",
+      "description": "Name of the team"
+    },
+    "members": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 5,
+      "description": "List of team member names"
+    },
+    "project_ideas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "maxItems": 5,
+      "description": "Project ideas submitted by the team"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "registered",
+        "presenting",
+        "completed"
+      ],
+      "default": "registered",
+      "description": "Current team status"
+    }
+  },
+  "required": [
+    "team_number",
+    "team_name"
+  ]
+}

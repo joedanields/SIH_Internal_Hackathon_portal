@@ -1,0 +1,70 @@
+{
+  "name": "Score",
+  "type": "object",
+  "properties": {
+    "team_id": {
+      "type": "string",
+      "description": "Reference to the team being scored"
+    },
+    "project_idea_title": {
+      "type": "string",
+      "description": "Title of the project idea being scored"
+    },
+    "judge_name": {
+      "type": "string",
+      "description": "Name of the judge providing the score"
+    },
+    "judge_email": {
+      "type": "string",
+      "description": "Email of the judge"
+    },
+    "innovation": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 10,
+      "description": "Innovation score out of 10"
+    },
+    "feasibility": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 10,
+      "description": "Feasibility score out of 10"
+    },
+    "presentation": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 10,
+      "description": "Presentation/Communication score out of 10"
+    },
+    "technical": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 10,
+      "description": "Technical implementation score out of 10"
+    },
+    "impact": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 10,
+      "description": "Impact/Scalability score out of 10"
+    },
+    "total": {
+      "type": "number",
+      "description": "Total score (auto-calculated)"
+    },
+    "comments": {
+      "type": "string",
+      "description": "Optional judge comments"
+    }
+  },
+  "required": [
+    "team_id",
+    "project_idea_title",
+    "judge_name",
+    "innovation",
+    "feasibility",
+    "presentation",
+    "technical",
+    "impact"
+  ]
+}

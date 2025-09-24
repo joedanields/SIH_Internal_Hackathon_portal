@@ -1,0 +1,38 @@
+{
+  "name": "Judge",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Judge full name"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "Judge email address"
+    },
+    "login_code": {
+      "type": "string",
+      "description": "Simple access code for judge login"
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "judge",
+        "admin"
+      ],
+      "default": "judge",
+      "description": "User role in the system"
+    },
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether the judge is active"
+    }
+  },
+  "required": [
+    "name",
+    "email",
+    "login_code"
+  ]
+}
