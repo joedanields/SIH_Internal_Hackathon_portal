@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { Award, Users, BarChart3, Settings, LogOut } from "lucide-react";
 
-export default function Layout({ children, currentPageName }) {
+export default function Layout({ children }) {
   const location = useLocation();
   const [currentUser, setCurrentUser] = React.useState(null);
 
@@ -20,11 +20,6 @@ export default function Layout({ children, currentPageName }) {
     setCurrentUser(null);
     window.location.href = createPageUrl('Landing');
   };
-
-  // Don't show layout for landing page
-  if (currentPageName === 'Landing') {
-    return children;
-  }
 
   const isAdmin = currentUser?.role === 'admin';
 
