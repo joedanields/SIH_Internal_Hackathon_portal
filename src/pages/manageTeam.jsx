@@ -7,8 +7,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Plus, Users, UserCheck, Settings } from "lucide-react";
 import { motion } from "framer-motion";
-import TeamManager from "../components/admin/TeamManager";
-import JudgeManager from "../components/admin/JudgeManager";
+import TeamManager from "@/components/admin/TeamManager";
+import JudgeManager from "@/components/admin/JudgeManager";
 
 export default function ManageTeams() {
   const [activeTab, setActiveTab] = useState("teams");
